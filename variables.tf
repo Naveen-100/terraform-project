@@ -30,5 +30,5 @@ variable "web_subnet_address" {
 
 variable "source_address_prefix" {
   type    = string
-  default = "20.115.19.92/32"
+  default = "52.188.19.90/32"
 }
