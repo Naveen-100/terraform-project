@@ -45,7 +45,7 @@ pipeline {
                 }
                 steps{
                     script {
-                        sh 'terraform plan'
+                        sh 'terraform plan -out tfplan'
                     }
                     input "Deploy to prod?"
                 }
@@ -56,7 +56,7 @@ pipeline {
                 }
                 steps{
                     script {
-                            sh 'terraform apply --auto-approve'
+                            sh 'terraform apply --auto-approve "tfplan"'
                         }
                     
                 }
