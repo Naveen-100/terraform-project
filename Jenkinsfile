@@ -47,8 +47,8 @@ pipeline {
                 steps{
                     script {
                             sh 'terraform plan'
-                            input "Deploy to prod?"
                     }
+                    input "Deploy to prod?"
                 }
             }
             stage('terraform apply') {
