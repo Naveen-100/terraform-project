@@ -3,7 +3,6 @@ pipeline {
     tools {
         terraform 'terraform'
     }
-    node{
         stages {
             stage('Poll Code Repository') {
                 steps {
@@ -46,7 +45,7 @@ pipeline {
                 }
                 steps{
                     script {
-                            sh 'terraform plan'
+                        sh 'terraform plan'
                     }
                     input "Deploy to prod?"
                 }
@@ -109,4 +108,3 @@ pipeline {
             }
         }
     }
-}
